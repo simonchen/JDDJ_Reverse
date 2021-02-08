@@ -3,6 +3,9 @@
 
 ## Resource override
 Searching the keyword 'signKeyV1' , converting the obfuscated js content  by clicking on 'Beautify JS' button
-<img arc="1.png" width="500" height="180" />
+<img src="1.png" width="500" height="180" />
+<img src="1.1.png" />
 
-## 
+## Intercept 'signKeyV1'
+<img src="2.png" />
+
