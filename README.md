@@ -78,6 +78,8 @@ for (int i = 0; i < a.Length; i++)
 // Now you get the final parameter values with '&' separator, it will be passed the 'GetHash' function to generate the hash value. (see below)
 ```
 string s = String.Join("&", b.Take(idx));
+string k = "923047ae3f8d11d8b19aeb9f3d1bc200";
+string h = GetHash(s, k);
 ```
 
 C# provided a way to make the hash value easily, I found an existing function to do that.
