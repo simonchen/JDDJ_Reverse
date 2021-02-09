@@ -2,6 +2,7 @@
 
 ## Background
 京东到家API URL很容易通过Fiddler或其它类似流量代理程序抓到，但是每个URL中包含了一个动态的自签名参数signKeyV1
+下面是逆向分析原理和c#源代码模拟产生signKeyV1.
 
 ## Tools
 京东到家web版signKeyV1逆向分析
