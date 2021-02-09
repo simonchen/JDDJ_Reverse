@@ -50,7 +50,6 @@ What the code lines do is:
 - Getting a string by concatenating all sorted parameter values in the array with '&' separator.
 
 - Generating a hash value to the string using HmacSHA256
-https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.hmacsha256?view=net-5.0
 
 ### Note: when generating the hash value, it attaches a fixed salt value - 923047ae3f8d11d8b19aeb9f3d1bc200 
 <img src="2.3.png" />
