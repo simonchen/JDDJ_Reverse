@@ -1,4 +1,9 @@
 # JDDJ_Reverse
+
+## Background
+京东到家API很容易通过Fiddler或其它类似流量代理程序抓到，
+
+## Tools
 京东到家web版signKeyV1逆向分析
 分析工具： Chrome, <a href="https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii">Resource override extension</href>
 
@@ -16,7 +21,7 @@ Object(m.b)(Object.assign(T, {
                   }))
 ```
 <img src="2.png" />
-Now you can easily convert the 'm.b' to actual function string, alternatively, you can step in to the function m.b 
+Now you can easily convert the 'm.b' to actual function codes, alternatively, you can step in to the function m.b 
 <img src="2.1.png" />
 <img src="2.2.png" />
 
@@ -35,3 +40,18 @@ function c(e) {
     return i.enc.Hex.stringify(c)
 }
 ```
+What the code lines will do is:
+
+1) Sorting the each of parameters by parementer name (alphabetic)
+2) Populates an array of those parameter values.
+3) Getting a string by concatenating all parameter values in the array with '&' separator.
+4) Generating a hash value to the string by <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.hmacsha256?view=net-5.0">HmacSHA256</a> ，
+*note: when generating the hash value, it will use a fixed salt value - 923047ae3f8d11d8b19aeb9f3d1bc200 
+<img src="2.3.png" />
+
+So you won't need to step into the actual codes how to generate the hash value, 
+instead, you can develop yourself function using any programming language to simulate what this javascript function does.
+
+## A function written in C# to generate signKeyV1
+
+
