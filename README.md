@@ -13,7 +13,7 @@ Searching the keyword 'signKeyV1' , converting the obfuscated js content  by cli
 <img src="1.png" />
 <img src="1.1.png" />
 
-## Decodes the function go generate 'signKeyV1'
+## Decodes the function o generate 'signKeyV1'
 Enable the option - "mobile device"(inspector tool > Toggle device toolbar) to access JDDJ home page, then break point at signKeyV1 
 Where has the main function to generate the sign key:
 ```
