@@ -46,7 +46,8 @@ What the code lines will do is:
 - The each of parameters in URL will be sorted by parementer name (alphabetic)
 - Populates an array of those parameter values.
 - Getting a string by concatenating all sorted parameter values in the array with '&' separator.
-- Generating a hash value to the string by <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.hmacsha256?view=net-5.0">HmacSHA256</a> ，
+- Generating a hash value to the string by <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.hmacsha256?view=net-5.0">HmacSHA256</a> 
+
 **Note: when generating the hash value, it attaches a fixed salt value - 923047ae3f8d11d8b19aeb9f3d1bc200 
 <img src="2.3.png" />
 
