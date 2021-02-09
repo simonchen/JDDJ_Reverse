@@ -10,12 +10,27 @@ Searching the keyword 'signKeyV1' , converting the obfuscated js content  by cli
 Enable the option - "mobile device"(inspector tool > Toggle device toolbar) to access JDDJ home page, then break point at signKeyV1 
 Where has the main function to generate the sign key:
 ```
-  Object(m.b)(Object.assign(T, {
-                        _jdrandom: R
-                    }))
+Object(m.b)(Object.assign(T, {
+                      _jdrandom: R
+                  }))
 ```
 <img src="2.png" />
-Now you can easily convert the 'm.b' to actual function string, of course, step over to the function m.b as follow:
+Now you can easily convert the 'm.b' to actual function string, alternatively, you can step in to the function m.b 
 <img src="2.1.png" />
-Deeply, you will see the final key function called 'n(931)'
 <img src="2.2.png" />
+
+```
+function c(e) {
+    var t = "object" == typeof e ? e : JSON.parse(e),
+        o = {};
+    Object.keys(t).sort().forEach(function(e) {
+        "functionId" != e && (o[e] = t[e])
+    });
+    var a = Object.values(o).filter(function(e) {
+            if ("" != e) return e
+        }),
+        i = n(931),
+        c = i.HmacSHA256(a.join("&"), r.e);
+    return i.enc.Hex.stringify(c)
+}
+```
