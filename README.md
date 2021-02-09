@@ -1,5 +1,6 @@
 # JDDJ_Reverse
 京东到家web版signKeyV1逆向分析
+分析工具： Chrome, <a href="https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii">Resource override extension</href>
 
 ## Resource override
 Searching the keyword 'signKeyV1' , converting the obfuscated js content  by clicking on 'Beautify JS' button
