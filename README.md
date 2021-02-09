@@ -65,14 +65,18 @@ IOrderedEnumerable<string> a1 = a.OrderBy(item => item.Split("=".ToCharArray())[
 a = a1.ToArray(); // Sorting parameters by ascending 
 string [] b = new string[a.Length];
 int idx = 0;
+```
 // Taking the non-empty value into a new array (note: excluding the parameter - 'functionId')
+```
 for (int i = 0; i < a.Length; i++)
 {
   string [] c = a[i].Split("=".ToCharArray());
   if (c.Length < 2 || c[1].Length == 0 || c[0] == "functionId") continue;
   b[idx++] = Uri.UnescapeDataString(c[1]);
 }
+```
 // Now you get the final parameter values with '&' separator, it will be passed the 'GetHash' function to generate the hash value. (see below)
+```
 string s = String.Join("&", b.Take(idx));
 ```
 
