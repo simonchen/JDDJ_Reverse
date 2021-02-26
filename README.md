@@ -82,7 +82,7 @@ for (int i = 0; i < a.Length; i++)
 // Now you get the final parameter values with '&' separator, it will be passed the 'GetHash' function to generate the hash value. (see below)
 ```
 string s = String.Join("&", b.Take(idx));
-string k = "923047ae3f8d11d8b19aeb9f3d1bc200";
+string k = "923047ae3f8d11d8b19aeb9f3d1bc200"; // The fixed salt value
 string h = GetHash(s, k);
 ```
 
@@ -108,4 +108,5 @@ public static String GetHash(String text, String key)
 }
 ```
 
-## END
+# Warning
+You can use the codes for free for personal purpose only, you will be responsible for any legal suit in commercial usage.
